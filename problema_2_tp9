@@ -1,0 +1,22 @@
+program PROBLEMA_1_TP9;
+{$codepage utf8}
+var
+    num1,num2,resultado:integer;
+
+function division_entera(A,B:integer):integer;
+   begin
+    if(A<B)then
+        division_entera:=0
+    else
+        begin
+        if(A>=B)then
+            division_entera:=1+division_entera(A-B,B);
+        end;
+        
+    end;
+
+begin
+    write('Ingrese dos números enteros: ');readln(num1,num2);
+    resultado:=division_entera(num1,num2);
+    write('EL resultado del la división entera es de: ', resultado);
+end.
